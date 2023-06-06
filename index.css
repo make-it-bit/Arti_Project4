@@ -1,0 +1,76 @@
+html {
+    margin: 0;
+    background-color: gray;
+}
+
+body{
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
+    justify-content: space-around;
+}
+
+aside{
+    margin-left: auto;
+    margin-right: 0;
+    background-color: aquamarine;
+    min-height: 100vh;
+    text-align: center;
+    /*flex: flex-grow flex-shrink flex-basis;*/
+    /* flex: 1; -- tells the item to shrink and grow equally to fill the available space*/
+    width: 30vw;
+    margin-left: calc(15px + 4vw);
+}
+main {
+    flex: 1;
+    text-align: center;
+    background-color: antiquewhite;
+}
+main > section {
+    display: flex;
+    flex-direction: column;
+}
+main > section > section {
+    background-color: aqua;
+    flex: 1;
+    margin: 20px calc(10px + 2vw);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+main > section > section > img {
+    width: 120px;
+    height: 180px;
+}
+
+
+
+@media screen and (max-width: 535px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 100vh;
+    }
+    aside{
+        margin-left: 0;
+        width: auto;
+        flex: 1;
+        min-height: auto;
+    }
+    main > section {
+        margin: 10px auto;
+        width: 90%;
+        /*background-color: blueviolet;*/
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        
+    }
+    main > section > section {
+        min-width: 100%;
+        scroll-snap-align: start;
+        margin: 10px;
+        flex-direction: column;
+    }
+
+}
