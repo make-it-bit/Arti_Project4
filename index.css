@@ -8,7 +8,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .top_component {
@@ -16,8 +16,6 @@ body {
   top: 0;
   background-color: rgb(40, 39, 39);
   text-align: center;
-  flex: 1 1 auto;
-  max-height: 80px;
 }
 nav {
   border-bottom: 2px solid black;
@@ -34,7 +32,8 @@ nav h1 {
 
 /*making main a big row flexbox component*/
 main {
-  padding: 15px calc(1vw + 5px) 30px calc(1vw + 5px); 
+    flex: 1;
+  padding: 15px calc(1vw + 5px) 20px calc(1vw + 5px); 
   text-align: center;
   display: flex;
   align-content: space-between;
