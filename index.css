@@ -21,16 +21,44 @@ aside{
     width: 30vw;
     margin-left: calc(15px + 4vw);
 }
+aside > section {
+    margin: 10vh auto 0 auto;
+    width: 95%;
+    background-color: blue;
+}
+aside > section > div {
+    display: flex;
+    width: 90%;
+    
+    margin: 0 auto;
+    /*background-color: blueviolet;*/
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+}
+aside > section > div > section {
+    min-width: 75%;
+    scroll-snap-align: start;
+    margin: 10px;
+    flex-direction: column;
+    background-color: beige;
+}
+
+
 main {
     flex: 1;
     text-align: center;
     background-color: antiquewhite;
+    background-color: white;
 }
 main > section {
     display: flex;
     flex-direction: column;
+    background-color: antiquewhite;
+    margin: 10px;
 }
-main > section > section {
+main > section > div > section {
     background-color: aqua;
     flex: 1;
     margin: 20px calc(10px + 2vw);
@@ -38,7 +66,7 @@ main > section > section {
     display: flex;
     align-items: center;
 }
-main > section > section > img {
+img {
     width: 120px;
     height: 180px;
 }
@@ -57,7 +85,7 @@ main > section > section > img {
         flex: 1;
         min-height: auto;
     }
-    main > section {
+    main > section > div {
         margin: 10px auto;
         width: 90%;
         /*background-color: blueviolet;*/
@@ -66,11 +94,14 @@ main > section > section > img {
         scroll-snap-type: x mandatory;
         
     }
-    main > section > section {
+    main > section > div > section {
         min-width: 100%;
         scroll-snap-align: start;
         margin: 10px;
         flex-direction: column;
+    }
+    aside > section {
+        display: none;
     }
 
 }
