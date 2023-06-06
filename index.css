@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    color: gray;
+    background-color: black;
+}
+
+.top_component {
+    position: sticky;
+    top: 0;
+    background-color: rgb(40, 39, 39);
+    text-align: center;
+}
+nav {
+    border-bottom: 2px solid black;
+}
+nav h1{
+    margin: 7px auto;
+}
+.searchbar {
+    border-bottom: 2px solid gray;
+}
+.searchbar h2 {
+    margin: 5px auto;
+}
+
+/*making main a big row flexbox component*/
+main {
+    margin: 10px calc(1vw + 5px);
+    text-align: center;
+    display: flex;
+    align-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+}
+main > * {
+    flex: 1;
+}
+
+/*Creating many column flexboxes, every direct child is a flexbox*/
+main > * {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    overflow-y: auto;
+    gap: 12px;
+    max-height: 100vh;
+}
+
+/*creating boxes around "tags"*/
+main > section > * {
+    background-color: rgb(40, 39, 39);
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+/*Giving the "headers" a margin*/
+main > section > *:first-child {
+    min-width: 120px;
+    margin-bottom: 20px;
+}
