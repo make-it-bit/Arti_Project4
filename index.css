@@ -16,6 +16,8 @@ body {
   top: 0;
   background-color: rgb(40, 39, 39);
   text-align: center;
+  flex: 1 1 auto;
+  max-height: 80px;
 }
 nav {
   border-bottom: 2px solid black;
@@ -32,18 +34,18 @@ nav h1 {
 
 /*making main a big row flexbox component*/
 main {
-    height: auto;
-  margin: 10px calc(1vw + 5px);
+  padding: 15px calc(1vw + 5px) 30px calc(1vw + 5px); 
   text-align: center;
   display: flex;
   align-content: space-between;
-  gap: 20px;
+  gap: 10px;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
 
 /*Creating many column flexboxes, every direct child is a flexbox*/
 main > * {
+    margin: 0 10px;
   display: flex;
   flex-direction: column;
   flex: 1 1 300px;
