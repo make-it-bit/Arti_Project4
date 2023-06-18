@@ -1,5 +1,4 @@
-html,
-body {
+html {
   margin: 0;
   color: gray;
   background-color: black;
@@ -7,9 +6,14 @@ body {
 
 /*making two big flex elements and limiting their size to not annoy the end user*/
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .top_component {
@@ -48,27 +52,35 @@ main {
 }
 
 /*Creating many column flexboxes, every direct child is a flexbox*/
-main > * {
+.section {
   margin: 0 10px;
-  display: flex;
-  flex-direction: column;
   flex: 1 1 300px;
   min-width: 270px;
+  /*max-height: 100vh;*/
+  overflow-y: auto;
+}
+
+/*Giving the "headers" a margin* and a sticky position*/
+.header_box {
+  min-height: 120px;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.scroll_box {
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   scroll-behavior: smooth;
   gap: 12px;
-  max-height: 100vh;
 }
 
 /*creating boxes around "tags"*/
-main > section > * {
+.element {
   background-color: rgb(40, 39, 39);
   border-radius: 10px;
   min-height: 100px;
-}
-
-/*Giving the "headers" a margin*/
-main > section > *:first-child {
-  min-width: 120px;
-  margin-bottom: 20px;
 }
