@@ -3,6 +3,8 @@ body {
   margin: 0;
   text-align: center;
   background-color: rgb(241, 241, 241);
+  min-height: 600px;
+  max-height: 100vh;
 }
 
 * {
@@ -13,13 +15,11 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-height: 100vh;
   gap: 20px;
 }
 
 .navbar {
-  height: calc(35px + 3vh);
+  min-height: calc(35px + 3vh);
   background-color: black;
   border-radius: 10px;
 }
@@ -35,12 +35,18 @@ body {
   border-radius: 10px;
   flex: 0.25 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .aside_section_scrollbox {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow-y: auto;
+  min-height: 400px;
+  max-height: 70vh;
 }
 
 .aside_section_scrollbox > * {
