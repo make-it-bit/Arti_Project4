@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.biggest_flexbox {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100vh;
+  gap: 20px;
+}
+
+.navbar {
+  height: calc(35px + 3vh);
+  background-color: black;
+  border-radius: 10px;
+}
+
+.main_box {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.aside_section {
+  background-color: white;
+  border-radius: 10px;
+  flex: 0.25 1;
+  padding: 20px;
+}
+
+.aside_section_scrollbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aside_section_scrollbox > * {
+  border: 2px solid rgb(143, 142, 142);
+  border-radius: 10px;
+}
+
+.main_section {
+  flex: 0.75 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top_component {
+  display: flex;
+  flex: 0.4 1;
+  gap: 20px;
+}
+
+.top_left_component {
+  flex: 0.3 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top_left_component > * {
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+  flex-basis: 45%;
+  margin: 2.5%;
+}
+
+.top_right_component {
+  flex: 0.7 1;
+  display: flex;
+  height: 100%;
+  background-color: white;
+  justify-content: center;
+  align-self: center;
+  gap: 2%;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.top_right_component > * {
+  flex: 1 1;
+  border: 2px solid rgb(111, 111, 111);
+  border-radius: 10px;
+}
+
+.bottom_component {
+  flex: 0.6 1;
+  background-color: white;
+  text-align: left;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
